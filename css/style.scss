@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column; 
+}
+
+.button-wave {
+    font-size: 16px;
+    padding: .6em 3em;
+    margin: 3px;
+    border: 0;
+    outline: 0;
+    color: white;
+    background-color: #ccc;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px #f1f1f1;
+    transition: all .2s;
+    overflow: hidden;
+    position: relative;
+    border-radius: 100px;
+    &:hover {
+        background:  rgb(172, 172, 172);
+    }
+}
+
+.color-red {
+    background: rgb(226, 10, 10);
+    box-shadow: 0 3px 6px rgba(202, 7, 7, 0.5);
+    &:hover {
+        background:  rgb(255, 0, 0);
+    }
+}
+
+.color-blue {
+    background-color: #1c78c4;
+    box-shadow: 0 3px 6px #1c78c450;
+    &:hover {
+        background:  #2196F3;
+    }
+}
+.color-crimson {
+    background-color: crimson;
+    box-shadow: 0 3px 6px rgba(220, 20, 60, 0.7);
+    &:hover {
+        background:  rgb(185, 19, 52);
+    }
+}
+
+.button-wave-circle {
+    border-radius: 50%;
+    padding: .8em 1.1em;
+}
+
+.button-wave-square {
+    border-radius: .2em;
+    padding: .8em 3em;
+}
+.ripple {
+    border-radius: 50%;
+    background-color: rgba(43, 43, 43, 0.5);
+    position: absolute;
+    transform: scale(0);
+    animation: ripple .6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
